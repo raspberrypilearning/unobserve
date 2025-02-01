@@ -1,8 +1,8 @@
-In JavaScript, the `unobserve` method is used with an intersection observer to stop observing a target element.
+En JavaScript, la méthode `unobserve` est utilisée avec un Intersection Observer pour arrêter d'observer un élément cible.
 
-You could use `unobserve` to stop triggering an animation, or to avoid memory or performance issues.
+Tu peux utiliser `unobserve` pour arrêter de déclencher une animation, ou pour éviter des problèmes de mémoire ou de performance.
 
-Here is an example of the use of `unobserve` from the [Animated story](https://projects.raspberrypi.org/en/projects/animated-story) project in the [More Web](https://projects.raspberrypi.org/en/raspberrypi/more-web) path:
+Voici un exemple d'utilisation de `unobserve` du projet [Histoire animée](https://projects.raspberrypi.org/en/projects/animated-story) dans le parcours [Plus de web](https://projects.raspberrypi.org/en/raspberrypi/more-web) :
 
 ## --- code ---
 
@@ -13,11 +13,11 @@ line_number_start: 1
 line_highlights: 6
 -------------------------------------------------------
 
-// Hide bounce observer
+// Masquer le bounce observer
 const bounceObserver = new IntersectionObserver((entries) => {
 if (entries[0].isIntersecting) {
-console.log("BOUNCE TRIGGER IN VIEWPORT");
-document.querySelector("#bounce").style.opacity = 0;
+console.log("BOUNCE TRIGGER DANS LA FENÊTRE D'AFFICHAGE");
+document.querySelector("#rebond").style.opacity = 0;
 bounceObserver.unobserve(entries[0].target);
 }
 });
@@ -25,6 +25,6 @@ bounceObserver.observe(document.querySelector("#hideBounce"));
 
 \--- /code ---
 
-On line 6 there is a call to `bounceObserver` to `unobserve` the target entry (the element with `id="hideBounce"`).
+À la ligne 6 il y a un appel à `bounceObserver` pour `unobserve` (ne plus observer) l'entrée cible (l'élément avec `id="hideBounce"`).
 
-This avoids memory or performance issues, because there is no need to keep observing the element once it is hidden.
+Cela évite les problèmes de mémoire ou de performance, car il n'est pas nécessaire de continuer à observer l'élément une fois qu'il est caché.
