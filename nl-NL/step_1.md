@@ -1,8 +1,8 @@
-In JavaScript, the `unobserve` method is used with an intersection observer to stop observing a target element.
+In JavaScript wordt de `unobserve`-methode gebruikt met een intersection observer om het observeren van een doelelement te stoppen.
 
-You could use `unobserve` to stop triggering an animation, or to avoid memory or performance issues.
+Je kunt `unobserve` gebruiken om te voorkomen dat een animatie wordt geactiveerd, of om geheugen- of prestatieproblemen te voorkomen.
 
-Here is an example of the use of `unobserve` from the [Animated story](https://projects.raspberrypi.org/en/projects/animated-story) project in the [More Web](https://projects.raspberrypi.org/en/raspberrypi/more-web) path:
+Hier is een voorbeeld van het gebruik van `unobserve` in het [Geanimeerd verhaal](https://projects.raspberrypi.org/en/projects/animated-story) project in het [Meer Web](https://projects.raspberrypi.org/en/raspberrypi/more-web) pad:
 
 ## --- code ---
 
@@ -13,7 +13,7 @@ line_number_start: 1
 line_highlights: 6
 -------------------------------------------------------
 
-// Hide bounce observer
+// Verberg bounce observer
 const bounceObserver = new IntersectionObserver((entries) => {
 if (entries[0].isIntersecting) {
 console.log("BOUNCE TRIGGER IN VIEWPORT");
@@ -21,10 +21,10 @@ document.querySelector("#bounce").style.opacity = 0;
 bounceObserver.unobserve(entries[0].target);
 }
 });
-bounceObserver.observe(document.querySelector("#hideBounce"));
+bounceObserver.observe(document.querySelector("#hideBounce");
 
 \--- /code ---
 
-On line 6 there is a call to `bounceObserver` to `unobserve` the target entry (the element with `id="hideBounce"`).
+Op regel 6 wordt `bounceObserver` aangeroepen om het doelitem (het element met `id="hideBounce"`) `unobserve` te maken.
 
-This avoids memory or performance issues, because there is no need to keep observing the element once it is hidden.
+Hiermee worden geheugen- of prestatieproblemen vermeden, omdat het niet nodig is om het element te blijven observeren als het eenmaal verborgen is.
