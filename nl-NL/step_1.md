@@ -2,7 +2,7 @@ In JavaScript wordt de `unobserve`-methode gebruikt met een intersection observe
 
 Je kunt `unobserve` gebruiken om te voorkomen dat een animatie wordt geactiveerd, of om geheugen- of prestatieproblemen te voorkomen.
 
-Hier is een voorbeeld van het gebruik van `unobserve` in het [Geanimeerd verhaal](https://projects.raspberrypi.org/en/projects/animated-story) project in het [Meer Web](https://projects.raspberrypi.org/en/raspberrypi/more-web) pad:
+Here is an example of how `unobserve` is used in the [Animated story](https://projects.raspberrypi.org/en/projects/animated-story) project in the [More web](https://projects.raspberrypi.org/en/raspberrypi/more-web) path:
 
 ## --- code ---
 
