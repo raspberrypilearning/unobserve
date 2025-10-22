@@ -2,7 +2,7 @@ En JavaScript, la méthode `unobserve` est utilisée avec un Intersection Obser
 
 Tu peux utiliser `unobserve` pour arrêter de déclencher une animation, ou pour éviter des problèmes de mémoire ou de performance.
 
-Here is an example of how `unobserve` is used in the [Animated story](https://projects.raspberrypi.org/en/projects/animated-story) project in the [More web](https://projects.raspberrypi.org/en/raspberrypi/more-web) path:
+Voici un exemple d'utilisation de `unobserve` du projet [Histoire animée](https://projects.raspberrypi.org/fr-FR/projects/animated-story) dans le parcours [Plus de web](https://projects.raspberrypi.org/fr-FR/raspberrypi/more-web) :
 
 ## --- code ---
 
